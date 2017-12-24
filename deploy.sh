@@ -1,4 +1,3 @@
-#!/bin/bash
 echo -n "deploy project[y/n] :  "
 read deploy
 while [ "$deploy" != "y" ] && [ "$deploy" != "n" ]

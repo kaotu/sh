@@ -12,12 +12,15 @@ if [ "$clone" = 'y' ]
 then
 echo -n "Enter your repository URL : "
 read URL
-echo -n "change project name : "
+echo -n "Change project name : "
 read name
 echo "cloning project..."
 cd /var/www/
 git clone $URL $name
 cd /var/www/$name
+else 
+echo -n "What your project name already install? : "
+read name
 fi
 
 echo -n "git pull update [y/n] : "
@@ -27,7 +30,7 @@ then
 git pull
 echo "completed"
 fi
-cd /var/www/10X/alpaca-web
+cd /var/www/$name
 sudo npm install pdfkit -save
 sudo npm install
 sudo npm update

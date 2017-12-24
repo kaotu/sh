@@ -21,7 +21,6 @@ echo -n "Create directory www[y/n] : "
 read www
 if [ "$www" = 'y' ]
 then
-echo -n "Create www"
 sudo mkdir -p /var/www
 echo -n "Create success"
 fi

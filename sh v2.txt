@@ -71,7 +71,6 @@ sudo systemctl restart nginx -y
 echo "restart completed"
 fi
 
-
 echo -n "Update ALL SERVICE [y/n] : "
 read nginx
 if [ "$nginx" = 'y' ]

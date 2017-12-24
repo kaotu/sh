@@ -11,6 +11,11 @@ sudo yum install curl sudo
 sudo curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
 sudo sudo yum install nodejs -y
 sudo yum install npm -y
+sudo yum install firewalld
+systemctl start firewalld
+systemctl enable firewalld
+sudo yum -y install net-tools 
+
 
 echo -n "Create directory www[y/n] : "
 read www

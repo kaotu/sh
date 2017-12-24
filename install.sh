@@ -13,35 +13,3 @@ sudo sudo yum install nodejs -y
 sudo yum install npm -y
 cd /var/www/
 
-echo -n "Do you have git project(clone)[y/n]: "
-read clone
-while [ "$clone" != "y" ] && [ "$clone" != "n" ]
-do
-echo -n "Do you have git project(clone)[y/n]: "
-read clone
-done
-
-if [ "$clone" = 'y' ]
-then
-echo -n "Enter your repository URL : "
-read URL
-echo -n "change project name : "
-read name
-echo "cloning project..."
-cd /var/www/
-git clone $URL $name
-cd /var/www/$name
-fi
-
-echo -n "git pull update [y/n] : "
-read pull
-if [ "$pull" = 'y' ]
-then
-git pull
-echo "completed"
-fi
-cd /var/www/10X/
-sudo npm install pdfkit -save -y
-sudo npm install -y
-sudo npm update -y
-

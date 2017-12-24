@@ -1,16 +1,16 @@
 #!/bin/bash
 
-#sudo yum update
-#sudo yum install nano
-#sudo yum install epel-release
-#sudo yum install nginx
-#sudo systemctl start nginx
-#sudo systemctl enable nginx
-#sudo yum install git
-#sudo yum install curl sudo
+#sudo yum update -y
+#sudo yum install nano -y
+#sudo yum install epel-release -y
+#sudo yum install nginx -y
+#sudo systemctl start nginx -y
+#sudo systemctl enable nginx -y
+#sudo yum install git -y
+#sudo yum install curl sudo 
 #sudo curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
-#sudo sudo yum install nodejs
-#sudo yum install npm
+#sudo sudo yum install nodejs -y
+#sudo yum install npm -y
 #cd /var/www/
 
 echo -n "Do you have git project(clone)[y/n]: "
@@ -41,9 +41,9 @@ git pull
 echo "completed"
 fi
 cd /var/www/10X/alpaca-web
-sudo npm install pdfkit -save
-sudo npm install
-sudo npm update
+sudo npm install pdfkit -save -y
+sudo npm install -y
+sudo npm update -y
 
 echo -n "deploy project[y/n] :  "
 read deploy
@@ -67,10 +67,10 @@ read nginx
 if [ "$nginx" = 'y' ]
 then
 echo "processing ..."
-sudo systemctl restart nginx
+sudo systemctl restart nginx -y
 echo "restart completed"
 fi
 
-#sudo yum install policycoreutils-python
-#sudo semanage fcontext -a -t httpd_sys_content_t "/var/www/Hobbyforfun(/.*)?"
+#sudo yum install policycoreutils-python -y
+#sudo semanage fcontext -a -t httpd_sys_content_t "/var/www/Hobbyforfun(/.*)?" 
 #sudo restorecon -vR /var/www/Hobbyforfun

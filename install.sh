@@ -18,6 +18,6 @@ if [ "$www" = 'y' ]
 then
 echo -n "Create www"
 sudo mkdir -p /var/www
-echo "Create success"
+echo -n "Create success"
 fi
 

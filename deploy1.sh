@@ -30,10 +30,10 @@ then
 git pull
 echo "completed"
 fi
-cd /var/www/$name
-sudo npm install pdfkit -save
-sudo npm install
-sudo npm update
+cd /var/www/$name/
+#sudo npm install pdfkit -save
+#sudo npm install
+#sudo npm update
 
 echo -n "deploy project[y/n] :  "
 read deploy
@@ -46,9 +46,13 @@ done
 if [ "$deploy" = 'y' ]
 then
 echo -n "installing pm2"
+sudo npm install pdfkit -save
+sudo npm install
+sudo npm update
 sudo npm install pm2 -g
-sudo npm start
+
 sudo pm2 start npm -- start
+sudo pm2 list
 echo "pm2 process completed"
 fi
 
@@ -60,6 +64,10 @@ echo "processing ..."
 sudo systemctl restart nginx
 echo "restart completed"
 fi
+
+#setsebool
+setsebool -P httpd_can_network_connect 1
+
 
 #sudo yum install policycoreutils-python
 #sudo semanage fcontext -a -t httpd_sys_content_t "/var/www/Hobbyforfun(/.*)?"

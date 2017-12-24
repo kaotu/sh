@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo yum update
+sudo yum update -y
 sudo yum install nano -y
 sudo yum install epel-release -y
 sudo yum install nginx -y

@@ -10,4 +10,3 @@ sudo yum install curl sudo
 sudo curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
 sudo sudo yum install nodejs -y
 sudo yum install npm -y
-

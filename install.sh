@@ -23,5 +23,6 @@ if [ "$www" = 'y' ]
 then
 sudo mkdir -p /var/www
 echo -n "Create success"
+echo
 fi
 

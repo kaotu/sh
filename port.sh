@@ -8,15 +8,15 @@ NC='\033[0m'
 
 sudo systemctl start firewalld
 echo
-echo "${Yellow}Openning port 80(http)${NC}"
-echo
+echo -e "${Yellow}Openning port 80(http)${NC}"
 sudo firewall-cmd --add-port=80/tcp --permanent
-echo "${Yellow}Openning port 3000${NC}"
+echo
+echo -e "${Yellow}Openning port 3000${NC}"
 sudo firewall-cmd --add-port=3000/tcp --permanent
-echo "${Green}Reloading port${NC}"
+echo
+echo -e "${Green}Reloading port${NC}"
 sudo firewall-cmd --reload
 echo
-echo "${Green}Port is opened${NC}"
-echo
+echo -e "${Green}Port is opened${NC}"
 sudo firewall-cmd --list-port
 
